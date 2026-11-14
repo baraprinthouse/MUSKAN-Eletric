@@ -1,0 +1,48 @@
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+# Force HTTPS when SSL is enabled in Hostinger.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Canonical clean routes for shared-hosting deployment
+RewriteCond %{DOCUMENT_ROOT}/vehicles/$1.html -f
+RewriteRule ^vehicles/([a-z0-9-]+)/?$ vehicles/$1.html [L]
+RewriteRule ^vehicles/([a-z0-9-]+)/?$ vehicle.html?slug=$1 [QSA,L]
+RewriteRule ^vehicles/?$ vehicles.html [L]
+RewriteRule ^emi/?$ emi.html [L]
+RewriteRule ^offers/?$ offers.html [L]
+RewriteRule ^exchange/?$ exchange.html [L]
+RewriteRule ^test-ride/?$ test-ride.html [L]
+RewriteRule ^service/?$ service.html [L]
+RewriteRule ^showrooms/?$ showrooms.html [L]
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^blog/?$ blog.html [L]
+RewriteRule ^blog/electric-vs-petrol-nepal/?$ blog-ev-vs-petrol.html [L]
+RewriteRule ^blog/ev-scooter-emi-nepal/?$ blog-emi-nepal.html [L]
+RewriteRule ^blog/charging-electric-scooter-at-home/?$ blog-home-charging.html [L]
+RewriteRule ^blog/electric-scooter-maintenance-checklist/?$ blog-maintenance.html [L]
+RewriteRule ^blog/ev-policy-nepal/?$ blog-ev-policy-nepal.html [L]
+RewriteCond %{DOCUMENT_ROOT}/blog/$1.html -f
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog/$1.html [L]
+RewriteRule ^blog/([a-z0-9-]+)/?$ blog-post.html?slug=$1 [QSA,L]
+RewriteRule ^vehicles/([a-z0-9-]+)/?$ vehicle.html?slug=$1 [QSA,L]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com https://www.googletagmanager.com https://connect.facebook.net; connect-src 'self' https://*.supabase.co https://challenges.cloudflare.com https://www.google-analytics.com https://region1.google-analytics.com https://www.facebook.com; frame-src https://challenges.cloudflare.com https://www.google.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' https://wa.me"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://[DOMAIN]/</loc><priority>1.0</priority></url>
+<url><loc>https://[DOMAIN]/vehicles</loc><priority>0.9</priority></url>
+<url><loc>https://[DOMAIN]/offers</loc><priority>0.8</priority></url>
+<url><loc>https://[DOMAIN]/emi</loc><priority>0.9</priority></url>
+<url><loc>https://[DOMAIN]/exchange</loc><priority>0.8</priority></url>
+<url><loc>https://[DOMAIN]/test-ride</loc><priority>0.8</priority></url>
+<url><loc>https://[DOMAIN]/service</loc><priority>0.7</priority></url>
+<url><loc>https://[DOMAIN]/showrooms</loc><priority>0.8</priority></url>
+<url><loc>https://[DOMAIN]/about</loc><priority>0.6</priority></url>
+<url><loc>https://[DOMAIN]/contact</loc><priority>0.8</priority></url>
+<url><loc>https://[DOMAIN]/blog</loc><priority>0.6</priority></url>
+<url><loc>https://[DOMAIN]/blog/electric-vs-petrol-nepal</loc><priority>0.5</priority></url>
+<url><loc>https://[DOMAIN]/blog/ev-scooter-emi-nepal</loc><priority>0.5</priority></url>
+  <url><loc>https://[DOMAIN]/blog/charging-electric-scooter-at-home</loc></url>
+  <url><loc>https://[DOMAIN]/blog/electric-scooter-maintenance-checklist</loc></url>
+  <url><loc>https://[DOMAIN]/blog/ev-policy-nepal</loc></url>
+</urlset>
