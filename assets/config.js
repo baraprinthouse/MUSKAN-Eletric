@@ -1,0 +1,1 @@
+window.ME_CONFIG=Object.freeze({siteName:"Muskan Electric Pvt. Ltd.",siteUrl:"https://baraprinthouse.github.io/MUSKAN-Eletric/",phone:"+9779802366899",whatsapp:"9779802366899",supabaseUrl:"",supabaseAnonKey:"",turnstileSiteKey:"",analyticsId:"",metaPixelId:""});
